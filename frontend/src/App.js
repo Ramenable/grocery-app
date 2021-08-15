@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 // import { createBrowserHistory } from "history";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route, Switch } from "react-router-dom";
 // routing
 import Signin from "./Pages/Signin";
 import RoomLobby from "./Pages/RoomLobby";
@@ -46,7 +46,7 @@ function App() {
   routeChange();
 
   return (
-    <Router history={history}>
+    <HashRouter history={history} >
       <div className={classes.root}>
         <Container maxWidth="xl">
           <Switch>
@@ -55,7 +55,7 @@ function App() {
           </Switch>
         </Container>
       </div >
-    </Router>
+    </HashRouter>
   );
 }
 export default App;
